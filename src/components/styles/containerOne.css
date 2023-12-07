@@ -1,0 +1,21 @@
+.containerTitle {
+    display: flex;
+    overflow: hidden;
+    font-size: 1.5em;
+}
+
+.containerBtn{
+  display: flex;
+}
+
+@media only screen and (max-width: 750px){
+  .containerTitle {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+    .containerTitle {
+      font-size: 0.7em;
+    }
+  }
