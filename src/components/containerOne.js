@@ -7,7 +7,6 @@ import Typography from '@mui/material/Typography';
 import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
     
 const ContainerOne = () => {
-
     return (
         <div>
             <div className='containerTitle'>
