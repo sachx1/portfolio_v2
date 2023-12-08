@@ -1,19 +1,23 @@
 .containerTitle {
   display: flex;
   font-size: 1.5em;
+  padding-left: 50px;
 }
 
 .containerBlurb{
   display: flex;
+  padding-left: 50px;
 }
 
 .containerBtn{
   display: flex;
   padding-bottom: 10px;
+  padding-left: 50px;
 }
 
 .containerFooter{
   padding-top: 100px;
+  padding-left: 50px;
   display: flex;
 }
 
@@ -26,7 +30,7 @@
 
 .buttons:hover{
   color: black;
-  transition: background-color 0.5s ease;
+  transition: background-color 1s ease;
   background-color: beige;
 }
 
@@ -38,7 +42,7 @@
 }
 
 .buttonsFooter:hover{
-  transition: color 0.5s ease;
+  transition: color 1s ease;
   color: beige;
 }
 
@@ -62,6 +66,12 @@
 
   .containerFooter{
     display: flex;
+    padding-left: 0px;
+  }
+
+  .buttonsFooter {
+    color: beige;
+    padding-left: 0px;
   }
 }
 
@@ -70,12 +80,14 @@
       display: flex;
       font-size: 0.7em;
       text-align: center;
+      padding-left: 0px;
     }
 
     .containerBlurb{
       display: flex;
       text-align: center;
       justify-content: center;
+      padding-left: 0px;
     }
 
     .containerBtn {
@@ -85,5 +97,12 @@
     .containerFooter{
       display: flex;
       justify-content: center;
+      padding-top: 20px;
+      padding-left: 0px;
+    }
+
+    .buttonsFooter{
+      color: beige;
+      padding-left: 0px;
     }
   }
