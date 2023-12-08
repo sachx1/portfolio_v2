@@ -12,17 +12,34 @@
   padding-bottom: 10px;
 }
 
-button {
+.containerFooter{
+  padding-top: 100px;
+  display: flex;
+}
+
+.buttons {
   background: none;
   border: none;
   color: beige;
   border-radius: 10px;
 }
 
-button:hover{
+.buttons:hover{
   color: black;
   transition: background-color 0.5s ease;
   background-color: beige;
+}
+
+.buttonsFooter{
+  color: gray;
+  background-color: #282c34;
+  border: none;
+  border-radius: 10px;
+}
+
+.buttonsFooter:hover{
+  transition: color 0.5s ease;
+  color: beige;
 }
 
 @media only screen and (max-width: 750px){
@@ -42,6 +59,10 @@ button:hover{
   .containerBtn{
     display: flex;
   }
+
+  .containerFooter{
+    display: flex;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -59,5 +80,10 @@ button:hover{
 
     .containerBtn {
       display: none;
+    }
+
+    .containerFooter{
+      display: flex;
+      justify-content: center;
     }
   }
