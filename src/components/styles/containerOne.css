@@ -1,21 +1,63 @@
 .containerTitle {
-    display: flex;
-    overflow: hidden;
-    font-size: 1.5em;
+  display: flex;
+  font-size: 1.5em;
+}
+
+.containerBlurb{
+  display: flex;
 }
 
 .containerBtn{
   display: flex;
+  padding-bottom: 10px;
+}
+
+button {
+  background: none;
+  border: none;
+  color: beige;
+  border-radius: 10px;
+}
+
+button:hover{
+  color: black;
+  transition: background-color 0.5s ease;
+  background-color: beige;
 }
 
 @media only screen and (max-width: 750px){
   .containerTitle {
+    display: flex;
     font-size: 1em;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .containerBlurb{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .containerBtn{
+    display: flex;
   }
 }
 
 @media only screen and (max-width: 600px) {
     .containerTitle {
+      display: flex;
       font-size: 0.7em;
+      text-align: center;
+    }
+
+    .containerBlurb{
+      display: flex;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .containerBtn {
+      display: none;
     }
   }

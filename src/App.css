@@ -23,6 +23,7 @@ body {
   .container {
     flex-direction: column; /* Stack containers vertically on smaller screens */
     height: auto;
+    width: auto;
   }
 
   .container > div:nth-child(2){
