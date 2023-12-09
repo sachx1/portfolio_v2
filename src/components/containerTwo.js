@@ -1,7 +1,59 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './styles/containerTwo.css';
+
+const JobList = ({ jobs }) => {
+    return (
+      <div>
+        {Object.keys(jobs).map((employer) => {
+          const jobDetails = jobs[employer][0];
+          const { Employer, JobTitle, YOE, Location, Style, Description } = jobDetails;
+  
+          return (
+            <div key={Employer}>
+              <h2>{Employer}</h2>
+              <p>Job Title: {JobTitle}</p>
+              <p>Years of Experience: {YOE}</p>
+              <p>Location: {Location}</p>
+              <p>Work Style: {Style}</p>
+  
+              <ul>
+                {Description.map((point, index) => (
+                    <>
+                        <li key={index}><p>{point.PointOne}</p></li>
+                        <li key={index}><p>{point.PointTwo}</p></li>
+                        <li key={index}><p>{point.PointThree}</p></li>
+                        <li key={index}><p>{point.PointFour}</p></li>
+                        <li key={index}><p>{point.PointFive}</p></li>
+                        {point.PointSix && <li key={index}><p>{point.PointSix}</p></li> }
+                    </>
+                ))}
+              </ul>
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
         
-function containerTwo(props) {
+const ContainerTwo = () => {
+
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const response = await fetch('https://work-experience-65773cac05ee.herokuapp.com/Jobs');
+            const jsonData = await response.json();
+            setData(jsonData);
+          } catch (error) {
+            console.error('Error fetching data:', error);
+          }
+        };
+    
+        fetchData();
+    }, []);
+
+    console.log(data);
     return (
         <div>
             <div className='about'>
@@ -27,8 +79,9 @@ function containerTwo(props) {
                     friends and family, or travelling to new destinations.
                 </p>
             </div>
+            {data && <JobList jobs={data} />}
         </div>
-    );
+    )
 }
         
-export default containerTwo;
+export default ContainerTwo;
