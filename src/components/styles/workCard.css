@@ -1,0 +1,43 @@
+/* Card Styles */
+.card {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #282c34;
+  }
+  
+  .card h2 {
+    margin-bottom: 8px;
+    color: white;
+  }
+  
+  .card p {
+    margin-left: 25px;
+    margin-bottom: 8px;
+    color: beige;
+  }
+  
+  .card ul {
+    list-style-type: disc;
+    margin-left: 16px;
+  }
+  
+  .card li {
+    margin-left: 0px;
+    margin-bottom: 4px;
+    color: #777;
+  }
+
+  @media only screen and (max-width: 600px){
+    .card h2{
+        margin-left: 5px;
+    }
+
+    .card p{
+        margin-left: 10px;
+    }
+}
+
+  

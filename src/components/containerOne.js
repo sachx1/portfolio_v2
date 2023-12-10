@@ -8,6 +8,7 @@ import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
+import { Link } from 'react-scroll';
     
 const ContainerOne = () => {
     return (
@@ -21,12 +22,14 @@ const ContainerOne = () => {
                 </p>
             </div>
             <div className='containerBtn'>
-                <button className='buttons'>
-                    <Stack direction="row" alignItems="center" gap={1}>
-                        <InfoIcon />
-                        <Typography variant="body1">About</Typography>
-                    </Stack>
-                </button>
+                <Link to="about" smooth={true} duration={2000}>
+                    <button className='buttons'>
+                        <Stack direction="row" alignItems="center" gap={1}>
+                            <InfoIcon />
+                            <Typography variant="body1">About</Typography>
+                        </Stack>
+                    </button>
+                </Link>
             </div>
             <div className='containerBtn'>
                 <button className='buttons'>

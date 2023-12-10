@@ -1,42 +1,19 @@
 import React, { useState, useEffect } from 'react';
+import JobCard from './jobCard'; 
 import './styles/containerTwo.css';
+import ContainerOne from './containerOne';
 
 const JobList = ({ jobs }) => {
     return (
       <div>
-        {Object.keys(jobs).map((employer) => {
-          const jobDetails = jobs[employer][0];
-          const { Employer, JobTitle, YOE, Location, Style, Description } = jobDetails;
-  
-          return (
-            <div key={Employer}>
-              <h2>{Employer}</h2>
-              <p>Job Title: {JobTitle}</p>
-              <p>Years of Experience: {YOE}</p>
-              <p>Location: {Location}</p>
-              <p>Work Style: {Style}</p>
-  
-              <ul>
-                {Description.map((point, index) => (
-                    <>
-                        <li key={index}><p>{point.PointOne}</p></li>
-                        <li key={index}><p>{point.PointTwo}</p></li>
-                        <li key={index}><p>{point.PointThree}</p></li>
-                        <li key={index}><p>{point.PointFour}</p></li>
-                        <li key={index}><p>{point.PointFive}</p></li>
-                        {point.PointSix && <li key={index}><p>{point.PointSix}</p></li> }
-                    </>
-                ))}
-              </ul>
-            </div>
-          );
-        })}
+        {Object.keys(jobs).map((employer) => (
+          <JobCard key={employer} job={jobs[employer][0]} />
+        ))}
       </div>
     );
   };
         
 const ContainerTwo = () => {
-
     const [data, setData] = useState(null);
 
     useEffect(() => {
@@ -79,7 +56,9 @@ const ContainerTwo = () => {
                     friends and family, or travelling to new destinations.
                 </p>
             </div>
-            {data && <JobList jobs={data} />}
+            <div>
+                {data && <JobList jobs={data} />}
+            </div>
         </div>
     )
 }
