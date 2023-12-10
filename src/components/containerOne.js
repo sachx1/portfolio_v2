@@ -1,14 +1,14 @@
 import React from 'react';
 import './styles/containerOne.css';
-import InfoIcon from '@mui/icons-material/Info';
-import ArchiveIcon from '@mui/icons-material/Archive';
+//import InfoIcon from '@mui/icons-material/Info';
+//import ArchiveIcon from '@mui/icons-material/Archive';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
+//import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
-import { Link } from 'react-scroll';
+//import { Link } from 'react-scroll';
     
 const ContainerOne = () => {
     return (
@@ -21,7 +21,7 @@ const ContainerOne = () => {
                     JavaScript, ReactJS and Python!
                 </p>
             </div>
-            <div className='containerBtn'>
+            {/* <div className='containerBtn'>
                 <Link to="about" smooth={true} duration={2000}>
                     <button className='buttons'>
                         <Stack direction="row" alignItems="center" gap={1}>
@@ -46,7 +46,7 @@ const ContainerOne = () => {
                         <Typography variant="body1">Contact</Typography>
                     </Stack>
                 </button>
-            </div>
+            </div> */}
             <div className='containerBtn'>
                 <button className='buttons'>
                     <Stack direction="row" alignItems="center" gap={1}>

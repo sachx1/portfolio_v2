@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/workCard.css'
+import './styles/workCard.css';
 
 const JobCard = ({ job }) => {
   const { Employer, JobTitle, YOE, Location, Style, Description } = job;
