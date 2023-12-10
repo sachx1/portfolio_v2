@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import JobCard from './jobCard'; 
 import './styles/containerTwo.css';
-import ContainerOne from './containerOne';
 
 const JobList = ({ jobs }) => {
     return (

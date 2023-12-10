@@ -5,6 +5,11 @@
     padding-bottom: 50px;
 }
 
+.contact{
+    justify-content: center;
+    text-align: center;
+}
+
 p{
     line-height: 2;
 }
@@ -25,5 +30,11 @@ a:hover{
         padding-right: 10px;
         padding-top: 10px;
         padding-bottom: 10px;
+    }
+
+    .contact{
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
     }
 }
