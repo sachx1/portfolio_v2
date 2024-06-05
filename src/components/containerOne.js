@@ -51,7 +51,7 @@ const ContainerOne = () => {
                 <button className='buttons'>
                     <Stack direction="row" alignItems="center" gap={1}>
                         <PictureAsPdfIcon />
-                        <Typography variant="body1">Resume</Typography>
+                        <Typography variant="body1"><a href="https://drive.google.com/file/d/1V7Vxlu6TRrBjEbLSkUG5S9GpvWrZdyOF/view?usp=sharing">Resume</a></Typography>
                     </Stack>
                 </button>
             </div>
